@@ -10,7 +10,7 @@ class Bot(Client):
 
     def __init__(self):
         super().__init__(
-            name="INFINITYSTARRENAME24BOT",
+            name="MMWREN",
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
@@ -21,9 +21,11 @@ class Bot(Client):
     async def start(self):
         await super().start()
         me = await self.get_me()      
+        await self.send_message(chat_id=int(ADMIN), text="Re𝚂𝚃𝙰𝚁𝚃𝙴𝙳.. ❤️‍🩹")
         print(f"{me.first_name} | @{me.username} 𝚂𝚃𝙰𝚁𝚃𝙴𝙳...⚡️")
-       
+        
     async def stop(self, *args):
+       await self.send_message(chat_id=int(ADMIN), text="Stopped Please Restart Me...!!!")
        await super().stop()      
        print("Bot Restarting........")
 
